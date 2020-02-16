@@ -1,0 +1,23 @@
+- hosts: localhost
+  vars:
+      - dest_plug: "~/.local/share/nvim/site/autoload/"
+      - url_vim_plug: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+      - dest_init_vim: "~/.config/nvim"  
+  tasks:
+      - name: Create Directory
+        file:
+            path: "{{ dest_plug }}"
+            state: directory
+
+      - name: Download vim-plug
+        get_url:
+            url: "{{ url_vim_plug }}"
+            dest: "{{ dest_plug }}/plug.vim"
+      
+      - name: Install init.vim
+        file:
+            path: "{{ dest_init_vim }}/init.vim"
+            src: "{{ playbook_dir }}/init.vim"
+            state: link
+
+
