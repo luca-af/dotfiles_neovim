@@ -4,6 +4,12 @@
       - url_vim_plug: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
       - dest_init_vim: "~/.config/nvim"  
   tasks:
+      - name: Install neovim
+        become: yes
+        package:
+            name: neovim
+            state: latest
+            
       - name: Create Directory
         file:
             path: "{{ dest_plug }}"
