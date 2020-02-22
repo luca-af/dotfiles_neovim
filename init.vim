@@ -4,6 +4,9 @@ call plug#begin('$HOME/.local/share/nvim/plugged/')
 "Language support"
 
 Plug 'fatih/vim-go'
+Plug 'hashivim/vim-packer'
+Plug 'hashivim/vim-terraform'
+
 
 "Editor support"
 
@@ -40,6 +43,13 @@ let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:ale_set_loclist = 0
 let g:airline#extensions#ale#enabled = 1
+
+
+"Settings Specific to Terraform"
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
+
 
 "Settings Specifc to GO"
 
