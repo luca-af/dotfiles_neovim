@@ -30,7 +30,7 @@ set termguicolors
 set number
 set tabstop=8
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set autoindent
 set smartindent
 set cursorline
