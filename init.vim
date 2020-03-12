@@ -6,7 +6,7 @@ call plug#begin('$HOME/.local/share/nvim/plugged/')
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-packer'
 Plug 'hashivim/vim-terraform'
-
+Plug 'hashivim/vim-vagrant'
 
 "Editor support"
 
