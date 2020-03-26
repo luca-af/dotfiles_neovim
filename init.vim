@@ -24,6 +24,12 @@ call plug#end()
 
 "Global Editor config"
 
+syntax on
+set encoding=utf-8
+set fileencoding=utf-8
+set undofile
+set undodir=~/.vim/undodir
+
 "Enable mouse"
 set mouse=a mousemodel=popup
 set termguicolors
@@ -45,6 +51,8 @@ let g:ale_set_loclist = 0
 let g:airline#extensions#ale#enabled = 1
 
 
+
+
 "Settings Specific to Terraform"
 let g:terraform_align=1
 let g:terraform_fold_sections=1
@@ -53,10 +61,6 @@ let g:terraform_fmt_on_save=1
 
 "Settings Specifc to GO"
 
-"au FileType go set noexpandtab"
-"au FileType go set shiftwidth=4"
-"au FileType go set softtabstop=4"
-"au FileType go set tabstop=4"
 "au FileType go nmap <F12> <Plug>(go-def)"
 
 let g:go_highlight_build_constraints = 1
