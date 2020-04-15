@@ -49,7 +49,8 @@ let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:ale_set_loclist = 0
 let g:airline#extensions#ale#enabled = 1
-
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 
 
