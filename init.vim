@@ -64,6 +64,9 @@ let g:terraform_fmt_on_save=1
 
 "au FileType go nmap <F12> <Plug>(go-def)"
 
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
