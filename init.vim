@@ -19,6 +19,8 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'tpope/vim-fugitive'
+Plug 'craigemery/vim-autotag'
+Plug 'numkil/ag.nvim'
 
 call plug#end()
 
@@ -43,6 +45,12 @@ set cursorline
 set cursorcolumn
 
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
+highlight Pmenu ctermbg=8 guibg=#606060
+highlight PmenuSel ctermbg=1 guifg=#dddd00 guibg=#1f82cd
+highlight PmenuSbar ctermbg=0 guibg=#d6d6d6
+
 
 "Linter and other magic stuff, done with Ale"
 let g:ale_sign_error = '⤫'
@@ -53,29 +61,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 
-
 "Settings Specific to Terraform"
 let g:terraform_align=1
 let g:terraform_fold_sections=1
 let g:terraform_fmt_on_save=1
 
-
-"Settings Specifc to GO"
-
-"au FileType go nmap <F12> <Plug>(go-def)"
-
-
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
-let g:go_auto_type_info = 1
-let g:go_auto_sameids = 1
-let g:go_fmt_command = "goimports"
+source $HOME/.config/nvim/golang_support.vim
 
