@@ -13,7 +13,6 @@ Plug 'hashivim/vim-vagrant', { 'branch' : 'master' }
 
 Plug 'dense-analysis/ale', { 'tag' : 'v2.6.0' }
 Plug 'Shougo/deoplete.nvim', { 'tag' : '5.2' , 'do' : ':UpdateRemotePlugins' }
-"Plug 'roxma/nvim-yarp', { 'branch' : 'master' }  "Needed by deoplete
 Plug 'Shougo/neosnippet.vim', { 'branch' : 'master' }
 Plug 'Shougo/neosnippet-snippets', { 'branch' : 'master' }
 Plug 'vim-airline/vim-airline', { 'tag' : 'v0.11' }
@@ -23,7 +22,7 @@ Plug 'craigemery/vim-autotag', { 'branch' : 'master' }
 Plug 'numkil/ag.nvim', { 'branch' : 'master' }
 Plug 'preservim/nerdtree', { 'tag' : '6.8.0' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'branch' : 'master' }
-
+Plug 'vimwiki/vimwiki', { 'tags' : 'v2.5' }
 call plug#end()
 
 "Global Editor config"
@@ -33,8 +32,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set undofile
 set undodir=~/.vim/undodir
-
-"Enable mouse"
 set mouse=a mousemodel=popup
 set termguicolors
 set number
@@ -45,6 +42,9 @@ set autoindent
 set smartindent
 set cursorline
 set cursorcolumn
+set nocompatible
+let mapleader='\'
+filetype plugin on
 
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
@@ -53,6 +53,11 @@ highlight Pmenu ctermbg=8 guibg=#606060
 highlight PmenuSel ctermbg=1 guifg=#dddd00 guibg=#1f82cd
 highlight PmenuSbar ctermbg=0 guibg=#d6d6d6
 
+
+"VimWiki
+
+let g:vimwiki_list = [{'path': '~/Documents/Stuff/Mine/wikiMine', 'syntax': 'markdown', 'ext': '.md'},
+                      \ {'path': '~/Documents/Stuff/Work/wikiWork', 'syntax': 'markdown', 'ext': '.md'}]
 
 "NerdTREE options
 
