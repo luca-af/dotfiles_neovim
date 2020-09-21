@@ -4,14 +4,14 @@ call plug#begin('$HOME/.local/share/nvim/plugged/')
 
 "Language support"
 
-Plug 'fatih/vim-go', { 'tag' : 'v1.23' }
+Plug 'fatih/vim-go', { 'tag' : 'v1.24' }
 Plug 'hashivim/vim-packer', { 'branch' : 'master' }
 Plug 'hashivim/vim-terraform', { 'branch' : 'master' }
 Plug 'hashivim/vim-vagrant', { 'branch' : 'master' }
 
 "Editor support"
 
-Plug 'dense-analysis/ale', { 'tag' : 'v2.6.0' }
+Plug 'dense-analysis/ale', { 'tag' : 'v3.0.0' }
 Plug 'Shougo/deoplete.nvim', { 'tag' : '5.2' , 'do' : ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim', { 'branch' : 'master' }
 Plug 'Shougo/neosnippet-snippets', { 'branch' : 'master' }
@@ -20,7 +20,7 @@ Plug 'deoplete-plugins/deoplete-go', { 'branch' : 'master', 'do': 'make'}
 Plug 'tpope/vim-fugitive', { 'tag' : 'v3.2' }
 Plug 'craigemery/vim-autotag', { 'branch' : 'master' }
 Plug 'numkil/ag.nvim', { 'branch' : 'master' }
-Plug 'preservim/nerdtree', { 'tag' : '6.8.0' }
+Plug 'preservim/nerdtree', { 'tag' : '6.9.9' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'branch' : 'master' }
 Plug 'vimwiki/vimwiki', { 'tags' : 'v2.5' }
 call plug#end()
