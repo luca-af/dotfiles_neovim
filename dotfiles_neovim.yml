@@ -8,7 +8,9 @@
       - name: Install neovim
         become: yes
         package:
-            name: neovim
+            name: 
+              - neovim
+              - python3-neovim
             state: latest
 
       - name: Create Directory
