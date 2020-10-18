@@ -53,6 +53,8 @@ highlight Pmenu ctermbg=8 guibg=#606060
 highlight PmenuSel ctermbg=1 guifg=#dddd00 guibg=#1f82cd
 highlight PmenuSbar ctermbg=0 guibg=#d6d6d6
 
+"Specific highlight
+autocmd BufEnter,BufRead Containerfile set syn=dockerfile
 
 "VimWiki
 
