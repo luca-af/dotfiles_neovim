@@ -6,18 +6,19 @@
       - dest_init_vim: "~/.config/nvim"
   tasks:
       - name: Install neovim
-        become: yes
+        become: true
         package:
-            name: 
-              - neovim
-              - python3-neovim
+            name:
+                - neovim
+                - python3-neovim
             state: latest
-      
+
       - name: Set nvim as alternatives
+        become: true
         alternatives:
-          name: vim
-          link: /usr/bin/vim
-          path: /usr/bin/nvim
+            name: vim
+            link: /usr/bin/vim
+            path: /usr/bin/nvim
 
       - name: Create Directory
         file:
@@ -36,7 +37,7 @@
             state: link
 
       - name: "Install golang support"
-        file: 
-          path: "{{ dest_init_vim }}/golang_support.vim"
-          src: "{{ playbook_dir }}/golang.vim"
-          state: link
+        file:
+            path: "{{ dest_init_vim }}/golang_support.vim"
+            src: "{{ playbook_dir }}/golang.vim"
+            state: link
