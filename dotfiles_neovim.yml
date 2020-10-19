@@ -12,6 +12,12 @@
               - neovim
               - python3-neovim
             state: latest
+      
+      - name: Set nvim as alternatives
+        alternatives:
+          name: vim
+          link: /usr/bin/vim
+          path: /usr/bin/nvim
 
       - name: Create Directory
         file:
