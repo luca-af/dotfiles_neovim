@@ -61,6 +61,10 @@ autocmd BufEnter,BufRead Containerfile set syn=dockerfile
 let g:vimwiki_list = [{'path': '~/Documents/Stuff/Mine/wikiMine', 'syntax': 'markdown', 'ext': '.md'},
                       \ {'path': '~/Documents/Stuff/Work/wikiWork', 'syntax': 'markdown', 'ext': '.md'}]
 
+"VimBuffer
+map <C-f> :bnext<CR>
+map <C-g> :bprevious<CR>
+
 "NerdTREE options
 
 map <C-n> :NERDTreeToggle<CR>
