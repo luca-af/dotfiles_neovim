@@ -22,7 +22,6 @@ Plug 'craigemery/vim-autotag', { 'branch' : 'master' }
 Plug 'numkil/ag.nvim', { 'branch' : 'master' }
 Plug 'preservim/nerdtree', { 'tag' : '6.9.9' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'branch' : 'master' }
-Plug 'vimwiki/vimwiki', { 'tags' : 'v2.5' }
 call plug#end()
 
 "Global Editor config"
@@ -55,11 +54,6 @@ highlight PmenuSbar ctermbg=0 guibg=#d6d6d6
 
 "Specific highlight
 autocmd BufEnter,BufRead Containerfile set syn=dockerfile
-
-"VimWiki
-
-let g:vimwiki_list = [{'path': '~/Documents/Stuff/Mine/wikiMine', 'syntax': 'markdown', 'ext': '.md'},
-                      \ {'path': '~/Documents/Stuff/Work/wikiWork', 'syntax': 'markdown', 'ext': '.md'}]
 
 "VimBuffer
 map <C-f> :bnext<CR>
