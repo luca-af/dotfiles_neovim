@@ -46,7 +46,7 @@ let mapleader='\'
 filetype plugin on
 
 let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+call deoplete#custom#option('sources', { '_': ['ale'], })
 
 highlight Pmenu ctermbg=8 guibg=#606060
 highlight PmenuSel ctermbg=1 guifg=#dddd00 guibg=#1f82cd
@@ -90,7 +90,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "Settings Specific to Terraform"
 let g:terraform_align=1
-let g:terraform_fold_sections=1
+let g:terraform_fold_sections=0
 let g:terraform_fmt_on_save=1
 
 source $HOME/.config/nvim/golang_support.vim
