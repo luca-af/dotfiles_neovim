@@ -17,7 +17,7 @@ Plug 'Shougo/neosnippet.vim', { 'branch' : 'master' }
 Plug 'Shougo/neosnippet-snippets', { 'branch' : 'master' }
 Plug 'vim-airline/vim-airline', { 'tag' : 'v0.11' }
 Plug 'deoplete-plugins/deoplete-go', { 'branch' : 'master', 'do': 'make'}
-Plug 'tpope/vim-fugitive', { 'tag' : 'v3.2' }
+Plug 'tpope/vim-fugitive', { 'tag' : 'v3.6' }
 Plug 'craigemery/vim-autotag', { 'branch' : 'master' }
 Plug 'numkil/ag.nvim', { 'branch' : 'master' }
 Plug 'preservim/nerdtree', { 'tag' : '6.9.9' }
