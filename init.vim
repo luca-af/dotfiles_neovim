@@ -11,7 +11,7 @@ Plug 'hashivim/vim-vagrant', { 'branch' : 'master' }
 
 "Editor support"
 
-Plug 'dense-analysis/ale', { 'tag' : 'v3.0.0' }
+Plug 'dense-analysis/ale', { 'tag' : 'v3.1.0' }
 Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim', { 'branch' : 'master' }
 Plug 'Shougo/neosnippet-snippets', { 'branch' : 'master' }
