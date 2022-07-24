@@ -2,11 +2,7 @@
 "If there are no tags, I default on master"
 call plug#begin('$HOME/.local/share/nvim/plugged/')
 
-"Language support"
 
-Plug 'hashivim/vim-packer', { 'branch' : 'master' }
-Plug 'hashivim/vim-terraform', { 'branch' : 'master' }
-Plug 'hashivim/vim-vagrant', { 'branch' : 'master' }
 
 "Editor support"
 
@@ -86,10 +82,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 
-"Settings Specific to Terraform"
-let g:terraform_align=1
-let g:terraform_fold_sections=0
-let g:terraform_fmt_on_save=1
 
 function! IncludeIfExists(string)
   if filereadable(expand(a:string))
@@ -98,3 +90,4 @@ function! IncludeIfExists(string)
 endfunction
 
 call IncludeIfExists('$HOME/.config/nvim/golang_support.vim')
+call IncludeIfExists('$HOME/.config/nvim/hashicorp_support.vim')

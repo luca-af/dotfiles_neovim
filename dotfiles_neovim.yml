@@ -49,3 +49,12 @@
             path: "{{ dest_init_vim }}/golang_support.vim"
             src: "{{ playbook_dir }}/golang.vim"
             state: link
+
+      - name: "Install hashicorp support"
+        tags:
+          - always
+          - hashicorp
+        file:
+            path: "{{ dest_init_vim }}/hashicorp_support.vim"
+            src: "{{ playbook_dir }}/hashicorp.vim"
+            state: link
