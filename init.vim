@@ -92,4 +92,10 @@ let g:terraform_align=1
 let g:terraform_fold_sections=0
 let g:terraform_fmt_on_save=1
 
-source $HOME/.config/nvim/golang_support.vim
+function! IncludeIfExists(string)
+  if filereadable(expand(a:string))
+    exe "source " . expand(a:string)
+  endif
+endfunction
+
+call IncludeIfExists('$HOME/.config/nvim/golang_support.vim')
