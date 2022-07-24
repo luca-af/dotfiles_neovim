@@ -38,6 +38,9 @@
             state: link
 
       - name: "Install golang support"
+        tags:
+          - always
+          - golang
         file:
             path: "{{ dest_init_vim }}/golang_support.vim"
             src: "{{ playbook_dir }}/golang.vim"

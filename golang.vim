@@ -1,5 +1,7 @@
 "Settings Specifc to GO"
 
+Plug 'fatih/vim-go', { 'tag' : 'v1.24' }
+
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:go_highlight_build_constraints = 1

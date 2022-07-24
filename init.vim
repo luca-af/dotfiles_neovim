@@ -4,7 +4,6 @@ call plug#begin('$HOME/.local/share/nvim/plugged/')
 
 "Language support"
 
-Plug 'fatih/vim-go', { 'tag' : 'v1.24' }
 Plug 'hashivim/vim-packer', { 'branch' : 'master' }
 Plug 'hashivim/vim-terraform', { 'branch' : 'master' }
 Plug 'hashivim/vim-vagrant', { 'branch' : 'master' }
