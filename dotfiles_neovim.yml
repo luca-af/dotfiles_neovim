@@ -12,6 +12,7 @@
                 - neovim
                 - python3-neovim
                 - msgpack
+                - ansible
             state: latest
 
       - name: Set nvim as alternatives
@@ -23,8 +24,11 @@
 
       - name: Create Directory
         file:
-            path: "{{ dest_plug }}"
+            path: "{{ item }}"
             state: directory
+        loop:
+          - "{{ dest_plug }}"
+          - "{{ dest_init_vim }}"
 
       - name: Download vim-plug
         get_url:
